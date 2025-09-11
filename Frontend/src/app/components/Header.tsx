@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import "./../component/styles/Header.css";
+import "./styles/Header.css";
 import logo from "../../../public/logo_nckh.png";
 
 function AppHeader({ children }: { children: React.ReactNode }) {
@@ -28,17 +28,17 @@ function AppHeader({ children }: { children: React.ReactNode }) {
 
   const navigateChamDiem = () => {
     setOpenMenu(null); // đóng dropdown ngay khi click
-    router.push("/Student/ChamDiem");
+    router.push("/students/formchamdiem");
   };
 
   const navigateKetQua = () => {
     setOpenMenu(null);
-    router.push("/Student/Result");
+    router.push("/students/result");
   };
 
   const navigateXemds = () => {
     setOpenMenu(null);
-    router.push("/Student/ClassList");
+    router.push("/students/classlist");
   };
 
   return (
