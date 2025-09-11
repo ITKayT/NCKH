@@ -1,9 +1,15 @@
-import { ReactNode } from "react";
+// app/layout.tsx
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+const inter = Inter({ subsets: ['latin'] })
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
-  );
+  )
 }
